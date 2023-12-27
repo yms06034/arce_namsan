@@ -21,42 +21,42 @@ function setCookie(name, value, days) {
   document.cookie = name + '=' + value + '; expires=' + expirationDate.toUTCString() + '; path=/;';
 }
 
-// function initPopup() {
-//   var popup1Cookie = getCookie('popup1');
-//   if (popup1Cookie === 'hidden') {
-//     document.getElementById('popup1').setAttribute('data-popup-state', 'hidden');
-//   }
+function initPopup() {
+  var popup1Cookie = getCookie('popup1');
+  if (popup1Cookie === 'hidden') {
+    document.getElementById('popup1').setAttribute('data-popup-state', 'hidden');
+  }
 
-//   document.getElementById('hide1dayBtn1').addEventListener('click', function() {
-//     setCookie('popup1', 'hidden', 1);
+  document.getElementById('hide1dayBtn1').addEventListener('click', function() {
+    setCookie('popup1', 'hidden', 1);
 
-//     closePopup('popup1');
-//   });
+    closePopup('popup1');
+  });
 
-//   document.getElementById('closeBtn1').addEventListener('click', function() {
-//     closePopup('popup1');
-//   });
+  document.getElementById('closeBtn1').addEventListener('click', function() {
+    closePopup('popup1');
+  });
 
-//   var popup2Cookie = getCookie('popup2');
-//   if (popup2Cookie === 'hidden') {
-//     document.getElementById('popup2').setAttribute('data-popup-state', 'hidden');
-//   }
+  var popup2Cookie = getCookie('popup2');
+  if (popup2Cookie === 'hidden') {
+    document.getElementById('popup2').setAttribute('data-popup-state', 'hidden');
+  }
 
 
-//   document.getElementById('hide1dayBtn2').addEventListener('click', function() {
-//     setCookie('popup2', 'hidden', 1);
+  document.getElementById('hide1dayBtn2').addEventListener('click', function() {
+    setCookie('popup2', 'hidden', 1);
 
-//     closePopup('popup2');
-//   });
+    closePopup('popup2');
+  });
 
-//   document.getElementById('closeBtn2').addEventListener('click', function() {
-//     closePopup('popup2');
-//   });
-// }
+  document.getElementById('closeBtn2').addEventListener('click', function() {
+    closePopup('popup2');
+  });
+}
 
-// window.addEventListener('load', function() {
-//   initPopup();
-// });
+window.addEventListener('load', function() {
+  initPopup();
+});
 
 
 // SCROLL TOP BTN
@@ -103,7 +103,7 @@ messageBtn.addEventListener('click', () => {
 });
 
 function checkM(m) {
-  location.href = 'sms:' + '01071240304' + (m == 'ios' ? '&' : '?') + 'body=' + encodeURIComponent("아르스남산 정보 문의합니다.")
+  location.href = 'sms:' + '01021054005' + (m == 'ios' ? '&' : '?') + 'body=' + encodeURIComponent("아르스남산 정보 문의합니다.")
 }
 
 
@@ -113,6 +113,8 @@ var openModalBtn2 = document.getElementById('openModalBtnImg');
 
 var modal = document.getElementById('modal');
 var closeModalBtn = document.getElementsByClassName('close')[0];
+var thankYouMessage = document.getElementsByClassName("thankyou_message")[0];
+console.log(thankYouMessage);
 
 openModalBtn2.addEventListener('click', function() {
   showModal();
@@ -128,15 +130,18 @@ closeModalBtn.addEventListener('click', function() {
 
 function showModal() {
   modal.style.display = 'block';
+  thankYouMessage.style.display = 'none';
 }
 
 function closeModal() {
   modal.style.display = 'none';
+  thankYouMessage.style.display = 'none';
 }
 
 window.addEventListener('click', function(event) {
   if (event.target === modal) {
     modal.style.display = 'none';
+    thankYouMessage.style.display = 'none';
   }
 });
 
