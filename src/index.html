@@ -82,7 +82,7 @@
   <div class="btm-btn-area">
     <div class="btm--btn">
       <div class="btn-area">
-        <a id="tlphnCnslt" href="tel:010-2105-4005">
+        <a id="tlphnCnslt" href="tel:02-2273-4982">
           <img class="icon" src="../images/icon/ion_call.png" alt="call" />
           <p class="sub-text">전화문의</p>
         </a>
@@ -113,7 +113,7 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2 class="modal_totle">상담 접수</h2>
-      <form class="gform pure-form pure-form-stacked form-area" method="POST" data-email="sjk5838@naver.com"
+      <form class="gform pure-form pure-form-stacked form-area" method="POST" data-email="handj_official@naver.com"
         action="https://script.google.com/macros/s/AKfycbwZs3MegAQiX_YZhui3x3xdI1_e2rurLo5mdvdXTEHp7w-X1owDGF0MnZFiKUW65SPV/exec">
         <label for="name">이름 <span style="color:#ff5252">(필수)</span></label>
         <input type="text" id="name" name="이름" required placeholder="ex&#41; 아무개"><br>
@@ -121,10 +121,10 @@
         <input 
           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
           type="text" id="phonenumber" name="핸드폰번호" required placeholder="ex&#41; 01000000000"><br>
-        <label for="schedule">원하시는 전화 상담 접수 일자를 선택하세요 <span style="color:#ff5252">(필수)</span> </label>
-        <input class="margin-botton" type="date" name="상담일자" min="2023-06-01" max="2025-12-31" required />
-        <label for="time">원하시는 전화 상담 시간을 기재해주세요 <span style="color:#ff5252">(필수)</span></label>
-        <input name="상담시간" type="text" placeholder="ex&#41; 오후 2시" required />
+        <label for="schedule">원하시는 전화 상담 접수 일자를 선택하세요 <span>(선택)</span> </label>
+        <input class="margin-botton" type="date" name="상담일자" min="2023-06-01" max="2025-12-31" />
+        <label for="time">원하시는 전화 상담 시간을 기재해주세요 <span>(선택)</span></label>
+        <input name="상담시간" type="text" placeholder="ex&#41; 오후 2시" />
         <input id="sbms" class="submit-input" type="submit" value="제출" />
         <p class="notice">위 정보는 전화상담이 끝난 후에 삭제 됩니다.</p>
         <div style="display:none" class="thankyou_message">
